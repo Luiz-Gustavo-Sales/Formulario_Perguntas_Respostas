@@ -1,0 +1,10 @@
+body{
+    background-color:black;
+}
+
+#formulario_pergunta{
+    /*
+    5% da altura da tela (espaçamento)
+    */
+    margin-top: 5vh;
+}

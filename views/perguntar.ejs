@@ -1,0 +1,43 @@
+<!--IMPORTANDO O CABEÇALHO DO HTML (header.ejs)-->
+<%- include('partes_html/header.ejs') %>
+  <body>
+    <!-- importando o cabelho o vanbar-->
+    <%- include("partes_html/navbar.ejs") %>
+    <!--Class container do Bootstreap-->
+    <div class="container">
+      <!--Colocando class="card" para deixa o formulario mais bonito, estilo formulario-->
+      <div class="card" id="formulario_pergunta">
+        <!--class="card-header" é o cabeçalho do formulario, usando a class do botstrep-->
+        <div class="card-header">
+          <h3>Realizar pergunta</h3>
+        </div> 
+        <!--class="card-body" usando como se fosse o corpo do html, mas mais bonito em forma de formulário.-->
+        <div class="card-body">
+          <!--formulario metodo post
+          action="/salvarpergunta"-  está dizendo que está enviado para essa rota os dados.
+          -->
+          <form method="POST" action="/salvarpergunta">
+          
+            <hr />
+            <label>Titulo</label>
+            <!--"form-control é do Bootstrap"
+            Colocando titulo da pergunta
+            -->
+            <input type="text" placeholder="Titulo" class="form-control" name="titulo"/>
+            <!--Colocando a descriçao da da pergunta com a class="form-controll", para deixa bonito-->
+            
+            <br /><label>Descrição</label>
+            <textarea placeholder="Descreva sua pergunta aqui" class="form-control" name="descricao"></textarea>
+            <br />
+            <!--class="btn btn-success" para deixa o botão verde-->
+            <button class="btn btn-Success">Perguntar</button>
+          </form>
+        </div>
+      </div>
+      <!-- finalizando class="container"-->
+    </div>
+  </body>
+  <!--Importando os arquivos bootStrp,Jquery etc.-->
+  <%- include ('partes_html/footer.ejs') %>
+ 
+  

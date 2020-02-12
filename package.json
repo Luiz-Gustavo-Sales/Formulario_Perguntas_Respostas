@@ -1,0 +1,23 @@
+{
+  "name": "plataforma_perguntas_respostas_udemy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon servidor.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0",
+    "nodemon": "^2.0.2",
+    "routes": "^2.1.0",
+    "sequelize": "^5.21.3",
+    "yarn": "^1.21.1"
+  }
+}

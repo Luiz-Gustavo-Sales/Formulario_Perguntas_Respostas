@@ -1,0 +1,34 @@
+<!--Importando o cabeçalho-->
+<%- include("partes_html/header.ejs") %>
+<body>
+  <!--Importando o cabelhaço-->
+  <%- include("partes_html/navbar.ejs") %>
+  
+<div class="container">
+ <hr>
+ <h1><%= pergunta.titulo %></h1>
+ <p><%=pergunta.descricao%></p>
+ <hr>
+ <form method="POST" action="/responder">
+     <h3>Responda</h3>
+     <label>Resposta:</label>
+     <textarea placeholder="Digite sua resposta" class="form-control" name="corpo_da_resposta"></textarea><br>
+     <!--ID sendo carregado dinamicamente-->
+    <input type="hidden" name="pergunta" value="<%=pergunta.id%>">
+     <button type="submit" class=" btn btn-success">Responder</button>
+ </form>
+ <hr>
+ <!--exibindo as respostas-->
+ <h3>Respostas</h3>
+ <% respostas.forEach(resposta =>{%>
+<div class="card">
+  <div class="card-body">
+    <%=resposta.Resposta %><br>
+  </div>
+  <br>
+</div>
+ <%})%>
+</div>
+</body>
+<!--Importando os links-->
+<%- include("partes_html/footer.ejs") %>

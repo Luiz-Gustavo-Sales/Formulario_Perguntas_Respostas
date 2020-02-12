@@ -1,0 +1,31 @@
+<!--Importando o cabeçalho-->
+<%- include("partes_html/header.ejs") %>
+<body>
+  <!--Importando o cabelhaço-->
+  <%- include("partes_html/navbar.ejs") %>
+  
+<div class="container">
+  <hr>
+  <h1>Perguntas Cadastradas</h1>
+  <hr>
+  <a href="/perguntar" class="btn btn-Success">Fazer Perguntas</a>
+  <br>
+  <br>
+  <!-- imprimindo a busca feita pelo findAll,, fazendo impressão com forEach-->
+<% perguntas_do_banco.forEach(perguntas =>{%>
+  <div class="card">
+    <div class="card-body">
+      <h3><%=perguntas.titulo%></h3>
+    </div>
+    <div class="card-footer">
+      <!--colocando no LOOP pra cada botão seu ID da pergunta para poder chamar na rota /pergunta-->
+ <a href="/pergunta/<%=perguntas.id%>"><button class="btn btn-Success">Responder</button></a>
+    </div>
+  </div>
+
+<%});%>
+
+</div>
+</body>
+<!--Importando os links-->
+<%- include("partes_html/footer.ejs") %>
